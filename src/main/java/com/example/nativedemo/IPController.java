@@ -8,10 +8,10 @@ import org.springframework.web.bind.annotation.RestController;
  * @author XYY
  * @since 1.0
  */
-@RestController
-public class NativeController {
+@RestController("ip")
+public class IPController {
 
-    @GetMapping("ip")
+    @GetMapping
     public String getIp(ServerHttpRequest request) {
         return request.getRemoteAddress().getHostString() + ":" + request.getRemoteAddress().getPort();
     }
